@@ -1,10 +1,22 @@
 /*jshint node:true*/
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var Funnel = require('broccoli-funnel');
+var stew = require('broccoli-stew');
+var md = require('broccoli-markdown');
 
 module.exports = function(defaults) {
+  // var templates = new BroccoliMarked(__dirname + '/app/templates');
+  // templates.targetExtension = 'hbs';
+
   var app = new EmberApp(defaults, {
     // Add options here
+    'ember-cli-staticboot': {
+      paths: [
+        '/',
+        '/lol'
+      ]
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
